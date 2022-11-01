@@ -1,0 +1,101 @@
+header {
+    background: var(--white-color);
+    border-bottom: 1px solid #ececec;
+  }
+  
+.header__container {
+    display: flex;
+    align-items: center;
+  }
+  
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+  
+.nav__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+  
+.header-contacts__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: 500;
+    line-height: 16px;
+    color: var(--secondary-color);
+    width: 50%;
+}
+  
+.nav__item {
+    margin-right: 50px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  
+    a {
+      color: var(--primary-color);
+      font-weight: 500;
+      line-height: 1.14;
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  
+    &:active a, &:focus-within a, &:hover a {
+      color: var(--accent-color);
+    }
+  
+    a {
+      &.current {
+        color: var(--accent-color);
+      }
+  
+      &::after {
+        width: 100%;
+        content: "";
+        position: absolute;
+        display: block;
+        height: 4px;
+        border-radius: 2px;
+        bottom: -1px;
+        background: var(--accent-color);
+        transform: scaleX(0);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    }
+  
+    &:active a::after, &:hover a::after, a.current::after {
+      transform: scaleX(1);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+  
+.header-contacts__item {
+    color: var(--secondary-color);
+    margin-right: 30px;
+  
+    a {
+      color: var(--secondary-color);
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  
+    &:focus-within a, &:hover a {
+      color: var(--accent-color);
+    }
+  
+    &:last-of-type {
+      margin-right: 0;
+    }
+}
+  
+.header-contacts__icon {
+    margin-right: 10px;
+    fill: var(--secondary-color);
+}
+  

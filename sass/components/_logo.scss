@@ -1,0 +1,25 @@
+header .header__logo {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    font-family: $secondaryFont;
+  
+    span {
+      color: #000;
+    }
+}
+
+footer .logo {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    font-family: $secondaryFont;
+    margin-bottom: 20px;
+    display: block;
+  
+    span {
+      color: var(--white-color);
+    }
+}
