@@ -1,3 +1,254 @@
+/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+Use a more readable tab size (opinionated).
+*/
+html {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/*
+Sections
+========
+*/
+/**
+Remove the margin in all browsers.
+*/
+body {
+  margin: 0;
+}
+
+/**
+Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/*
+Grouping content
+================
+*/
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+abbr[title] {
+  text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,9 +277,92 @@ address {
 }
 
 body {
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto";
   font-size: 14px;
   letter-spacing: 0.03em;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  display: flex;
+  align-items: center;
+}
+
+.about__imgs {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1170px;
+}
+
+.about__descr {
+  width: 100%;
+  position: relative;
+  bottom: 74px;
+  left: 0;
+  padding: 27px 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.clients__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.clients__list {
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.clients__item-link {
+  width: 170px;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients__item-icon {
+  fill: #afb1b8;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients__item-link:hover {
+  background-color: var(--white-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+}
+.clients__item-link:focus {
+  background-color: var(--white-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+}
+.clients__item-link:focus .clients__item-icon {
+  fill: var(--accent-color);
+}
+.clients__item-link:hover .clients__item-icon {
+  fill: var(--accent-color);
 }
 
 .container {
@@ -37,8 +371,201 @@ body {
   margin: 0 auto;
 }
 
-.section {
-  padding: 94px 0;
+.features {
+  padding-bottom: 0;
+}
+
+.features-list {
+  display: flex;
+}
+
+.features-list__item {
+  margin-right: 30px;
+}
+.features-list__item:last-of-type {
+  margin-right: 0;
+}
+
+.features-list__icon-fon {
+  width: 270px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: var(--dirty-white-color);
+}
+
+.features-list__title {
+  font-size: 14px;
+  color: var(--primary-color);
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  width: 270px;
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.features-list__descr {
+  line-height: 1.71;
+  color: var(--secondary-color);
+  width: 270px;
+}
+
+footer {
+  background-color: #2f303a;
+  padding: 60px 0;
+}
+footer .social-list {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+footer .social-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+footer .social-icon {
+  fill: var(--white-color);
+}
+
+.footer__columns {
+  display: flex;
+  align-items: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social__title {
+  font-size: 14px;
+  color: var(--white-color);
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+footer .social-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+footer .social-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+footer .social-link:hover {
+  background-color: var(--accent-color);
+}
+
+footer .social-icon {
+  fill: var(--white-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer__columns-social {
+  margin-left: 70px;
+  width: 206px;
+}
+
+.footer__address {
+  display: block;
+}
+
+.address__list li {
+  margin-bottom: 9px;
+}
+
+.address__list-item__location {
+  line-height: 1.71;
+  color: var(--white-color);
+}
+
+.address__list-item__cont {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.71;
+}
+
+.footer__columns-subs {
+  margin-left: 93px;
+}
+
+.subs__title {
+  font-size: 14px;
+  color: var(--white-color);
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer__subs-input {
+  padding: 15px 16px;
+  width: 358px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.6);
+  outline: 0;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+}
+.footer__subs-input::-moz-placeholder, .footer__subs-input:-ms-input-placeholder, .footer__subs-input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.03em;
+}
+
+.footer__subs-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin: 0;
+  padding: 8px 29px;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  color: var(--white-color);
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  min-height: 43px;
+  margin-left: 12px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer__subs-btn::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  background-image: url(../images/icon-send.svg);
 }
 
 header {
@@ -177,358 +704,28 @@ header {
   border-radius: 4px;
 }
 
-.about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.about__title {
+header .logo {
+  color: var(--accent-color);
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  display: flex;
-  align-items: center;
+  font-size: 26px;
+  line-height: 31px;
+  font-family: "Raleway";
+}
+header .logo span {
+  color: #000000;
 }
 
-.about__imgs {
-  margin-top: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 1170px;
-}
-
-.about__descr {
-  width: 100%;
-  position: relative;
-  bottom: 74px;
-  left: 0;
-  padding: 27px 0;
+footer .logo {
+  color: var(--accent-color);
   font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--white-color);
-  background-color: rgba(47, 48, 58, 0.8);
-}
-
-.features {
-  padding-bottom: 0;
-}
-
-.features-list {
-  display: flex;
-}
-
-.features-list__item {
-  margin-right: 30px;
-}
-.features-list__item:last-of-type {
-  margin-right: 0;
-}
-
-.features-list__icon-fon {
-  width: 270px;
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  background-color: var(--dirty-white-color);
-}
-
-.features-list__title {
-  font-size: 14px;
-  color: var(--primary-color);
-  font-weight: 700;
-  line-height: 1.14;
-  text-transform: uppercase;
-  width: 270px;
-  display: flex;
-  margin-bottom: 10px;
-  margin-top: 30px;
-}
-
-.features-list__descr {
-  line-height: 1.71;
-  color: var(--secondary-color);
-  width: 270px;
-}
-
-.team {
-  background: var(--dirty-white-color);
-  text-align: center;
-}
-
-.team__container-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.team__card {
-  background: var(--white-color);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14), 0 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0 0 4px 4px;
-  border: transparent solid 1px;
-  padding-bottom: 30px;
-}
-
-.team__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-}
-
-.team__card-name {
-  margin-top: 30px;
-  margin-bottom: 10px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  color: var(--primary-color);
-  text-align: center;
-}
-
-.team__card-position {
-  font-size: 16px;
-  line-height: 1.19;
-  text-align: center;
-  color: var(--secondary-color);
-}
-
-.team__social-list {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 16px;
-}
-
-.team__social-link {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--white-color);
-  border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.team__social-icon {
-  fill: #afb1b8;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.team__social-link:focus, .team__social-link:hover {
-  background-color: var(--accent-color);
-}
-.team__social-link:focus .team__social-icon, .team__social-link:hover .team__social-icon {
-  fill: var(--white-color);
-}
-
-.clients__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-}
-
-.clients__list {
-  display: flex;
-  gap: 30px;
-  margin-top: 50px;
-}
-
-.clients__item-link {
-  width: 170px;
-  height: 92px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.clients__item-icon {
-  fill: #afb1b8;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.clients__item-link:hover {
-  background-color: var(--white-color);
-  border: 1px solid var(--accent-color);
-  border-radius: 4px;
-}
-.clients__item-link:focus {
-  background-color: var(--white-color);
-  border: 1px solid var(--accent-color);
-  border-radius: 4px;
-}
-.clients__item-link:focus .clients__item-icon {
-  fill: var(--accent-color);
-}
-.clients__item-link:hover .clients__item-icon {
-  fill: var(--accent-color);
-}
-
-footer {
-  background-color: #2f303a;
-  padding: 60px 0;
-}
-footer .team__social-list {
-  display: flex;
-  gap: 10px;
-  margin-top: 16px;
-}
-footer .team__social-link {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-}
-footer .team__social-icon {
-  fill: var(--white-color);
-}
-
-.footer__columns {
-  display: flex;
-  align-items: baseline;
-  margin: 0;
-  padding: 0;
-}
-
-.footer-social__title {
-  font-size: 14px;
-  color: var(--white-color);
-  font-weight: 700;
-  line-height: 1.14;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
+  font-size: 26px;
+  line-height: 31px;
+  font-family: "Raleway";
   margin-bottom: 20px;
-}
-
-.footer-social__list {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 16px;
-}
-
-.footer-social__link {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.footer-social__link:hover {
-  background-color: var(--accent-color);
-}
-
-.footer-social__icon {
-  fill: var(--white-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer__columns-social {
-  margin-left: 70px;
-  width: 206px;
-}
-
-.footer__address {
   display: block;
 }
-
-.address__list li {
-  margin-bottom: 9px;
-}
-
-.address__list-item__location {
-  line-height: 1.71;
+footer .logo span {
   color: var(--white-color);
-}
-
-.address__list-item__cont {
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.71;
-}
-
-.footer__columns-subs {
-  margin-left: 93px;
-}
-
-.subs__title {
-  font-size: 14px;
-  color: var(--white-color);
-  font-weight: 700;
-  line-height: 1.14;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.footer__subs-input {
-  padding: 15px 16px;
-  width: 358px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: transparent;
-  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  color: rgba(255, 255, 255, 0.6);
-  margin-right: 12px;
-  outline: 0;
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-}
-.footer__subs-input::-moz-placeholder, .footer__subs-input:-ms-input-placeholder, .footer__subs-input::placeholder {
-  font-size: 16px;
-  line-height: 1.25;
-  color: rgba(255, 255, 255, 0.6);
-  letter-spacing: 0.03em;
-}
-
-.footer__subs-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  margin: 0;
-  padding: 8px 29px;
-  border-radius: 4px;
-  background-color: var(--accent-color);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-  color: var(--white-color);
-  font-family: "Roboto";
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-  min-height: 43px;
-  margin-left: 12px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer__subs-btn::after {
-  content: "";
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  margin-left: 10px;
-  background-image: url(../images/icon-send.svg);
 }
 
 .backdrop {
@@ -823,7 +1020,7 @@ textarea:focus, textarea:hover {
   left: 0;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects__list-item:hover .img-overlay {
@@ -864,26 +1061,79 @@ textarea:focus, textarea:hover {
   color: var(--secondary-color);
 }
 
-header .header__logo {
-  color: var(--accent-color);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 31px;
-  font-family: "Raleway";
-}
-header .header__logo span {
-  color: #000;
+.section {
+  padding: 94px 0;
 }
 
-footer .logo {
-  color: var(--accent-color);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 31px;
-  font-family: "Raleway";
-  margin-bottom: 20px;
-  display: block;
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
 }
-footer .logo span {
-  color: var(--white-color);
+
+.social-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white-color);
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon {
+  fill: #afb1b8;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:focus, .social-link:hover {
+  background-color: var(--accent-color);
+}
+.social-link:focus .social-icon, .social-link:hover .social-icon {
+  fill: var(--white-color);
+}
+
+.team {
+  background: var(--dirty-white-color);
+  text-align: center;
+}
+
+.team__container-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.team__card {
+  background: var(--white-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14), 0 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 4px 4px;
+  border: transparent solid 1px;
+  padding-bottom: 30px;
+}
+
+.team__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+}
+
+.team__card-name {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.team__card-position {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: var(--secondary-color);
 }/*# sourceMappingURL=main.css.map */

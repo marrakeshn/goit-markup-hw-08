@@ -1,4 +1,4 @@
-header .header__logo {
+header .logo {
     color: var(--accent-color);
     font-weight: 700;
     font-size: 26px;
@@ -6,7 +6,7 @@ header .header__logo {
     font-family: $secondaryFont;
   
     span {
-      color: #000;
+      color: #000000;
     }
 }
 

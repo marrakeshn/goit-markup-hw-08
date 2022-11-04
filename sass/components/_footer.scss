@@ -2,13 +2,13 @@ footer {
     background-color: #2f303a;
     padding: 60px 0;
   
-    .team__social-list {
+    .social-list {
       display: flex;
       gap: 10px;
       margin-top: 16px;
     }
   
-    .team__social-link {
+    .social-link {
       width: 44px;
       height: 44px;
       display: flex;
@@ -17,7 +17,7 @@ footer {
       border-radius: 50%;
     }
   
-    .team__social-icon {
+    .social-icon {
       fill: var(--white-color);
     }
 }
@@ -40,14 +40,14 @@ footer {
     margin-bottom: 20px;
 }
   
-.footer-social__list {
+footer .social-list {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 16px;
 }
   
-.footer-social__link {
+footer .social-link {
     width: 44px;
     height: 44px;
     display: flex;
@@ -62,7 +62,7 @@ footer {
     }
 }
   
-.footer-social__icon {
+footer .social-icon {
     fill: var(--white-color);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -113,7 +113,6 @@ footer {
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     color: rgba(255, 255, 255, 0.6);
-    margin-right: 12px;
     outline: 0;
     font-size: 16px;
     line-height: 1.25;
@@ -157,11 +156,3 @@ footer {
     margin-left: 10px;
     background-image: url(../images/icon-send.svg);
 }
-
-// footer .logo {
-//     color: var(--accent-color);
-//     font-weight: 700;
-//     font-size: 26px;
-//     line-height: 31px;
-//     font-family: $secondaryFont;
-// }

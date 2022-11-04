@@ -1,14 +1,15 @@
+@import "./utils/normalizer";
 @import "./utils/variables";
+@import "./layouts/about";
+@import "./layouts/clients";
 @import "./base/container";
-@import "./base/section";
+@import "./layouts/features";
+@import "./components/footer";
 @import "./components/header";
 @import "./layouts/hero";
-@import "./layouts/about";
-@import "./layouts/features";
-@import "./layouts/team";
-@import "./layouts/clients";
-@import "./components/footer";
+@import "./components/logo";
 @import "./components/modal";
 @import "./portfolio/portfolio";
-@import "./components/logo";
-
+@import "./base/section";
+@import "./components/social-list";
+@import "./layouts/team";
