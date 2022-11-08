@@ -4,8 +4,21 @@ header {
   }
 
 @media screen and (max-width: 767px) {
-  header {
+  .header__container {
     padding: 16px 0;
+  }
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__list {
+    display: none;
   }
 }
 
@@ -21,13 +34,6 @@ header {
     width: 50%;
 }
   
-.nav__list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
-}
-  
 .header-contacts__list {
     display: flex;
     align-items: center;
@@ -38,7 +44,7 @@ header {
     width: 50%;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .header-contacts__list {
     display: none;
   }
