@@ -27,15 +27,21 @@ footer {
     align-items: baseline;
     margin: 0;
     padding: 0;
+}
 
-    @media (min-width: 768px) {
+@media (max-width: 768px) {
+    .footer__columns {
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
-        gap: 30px 165px;
+        // flex-wrap: wrap;
+        // gap: 30px 165px;
     }
+}
 
-    @media (min-width: 1200px) {
+@media (min-width: 1200px) {
+    .footer__columns {
         display: flex;
         justify-content: center;
         text-align: left;
