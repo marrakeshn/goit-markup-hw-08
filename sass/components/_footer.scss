@@ -27,24 +27,20 @@ footer {
     align-items: baseline;
     margin: 0;
     padding: 0;
-}
 
-@media (min-width: 768px) {
-    .footer__columns {
+    @media (min-width: 768px) {
         display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px 165px;
-  }
-}
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px 165px;
+    }
 
-@media (min-width: 1200px) {
-    .footer__columns {
-    display: flex;
-    justify-content: center;
-    text-align: left;
-    gap: 70px;
-  }
+    @media (min-width: 1200px) {
+        display: flex;
+        justify-content: center;
+        text-align: left;
+        gap: 70px;
+    }
 }
   
 .footer-social__title {

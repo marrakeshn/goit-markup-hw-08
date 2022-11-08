@@ -547,7 +547,6 @@ footer .social-icon {
   margin: 0;
   padding: 0;
 }
-
 @media (min-width: 768px) {
   .footer__columns {
     display: flex;
@@ -564,6 +563,7 @@ footer .social-icon {
     gap: 70px;
   }
 }
+
 .footer-social__title {
   font-size: 14px;
   color: var(--white-color);
