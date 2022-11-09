@@ -14,7 +14,13 @@ header {
     justify-content: space-between;
     width: 50%;
 }
-  
+
+@media screen and (min-width: 100px) and (max-width: 480px) {
+  .header__nav {
+    display: none;
+  }
+}
+
 .nav__list {
     display: flex;
     align-items: center;
@@ -31,7 +37,13 @@ header {
     color: var(--secondary-color);
     width: 50%;
 }
-  
+
+@media screen and (min-width: 100px) and (max-width: 480px) {
+  .header-contacts__list {
+    display: none;
+  }
+}
+
 .nav__item {
     margin-right: 50px;
     position: relative;
