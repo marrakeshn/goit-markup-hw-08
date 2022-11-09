@@ -2,18 +2,18 @@
     padding-bottom: 0;
   }
   
-.features-list {
+  .features-list {
     display: flex;
+  }
+  
+  .features-list__item {
+    margin-right: 30px;
+  
+    &:last-of-type {
+      margin-right: 0;
+    }
 }
   
-.features-list__item {
-  margin-right: 30px;
-
-  &:last-of-type {
-    margin-right: 0;
-  }
-}
-
 .features-list__icon-fon {
     width: 270px;
     height: 120px;
@@ -23,7 +23,7 @@
     border-radius: 4px;
     background-color: var(--dirty-white-color);
 }
-
+  
 .features-list__title {
     font-size: 14px;
     color: var(--primary-color);
@@ -35,7 +35,7 @@
     margin-bottom: 10px;
     margin-top: 30px;
 }
-
+  
 .features-list__descr {
     line-height: 1.71;
     color: var(--secondary-color);

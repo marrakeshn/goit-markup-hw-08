@@ -2,14 +2,13 @@
     background: var(--dirty-white-color);
     text-align: center;
 }
-
+    
 .team__container-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 50px;
 }
-
   
 .team__card {
     background: var(--white-color);
@@ -24,7 +23,7 @@
     font-size: 36px;
     line-height: 1.17;
 }
-
+  
 .team__card-name {
     margin-top: 30px;
     margin-bottom: 10px;
