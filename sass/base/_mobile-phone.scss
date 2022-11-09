@@ -7,6 +7,9 @@
     right: 0;
     padding: 15px 10px 48px 40px;
     z-index: 999;
+    opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
 }
   
 .flex {
@@ -36,10 +39,18 @@
     }
 }
 
-.mobile-menu.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+.mobile-menu {
+    &.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;   
+    }
+
+    &.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: unset;
+    }
 }
 
 .menu-close {

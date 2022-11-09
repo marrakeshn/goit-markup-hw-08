@@ -3,11 +3,7 @@ header {
     border-bottom: 1px solid #ececec;
 }
 
-@media screen and (max-width: 767px) {
-  .header__container {
-    padding: 16px 0;
-  }
-}
+
 
 .nav__list {
   display: flex;
@@ -25,7 +21,13 @@ header {
 .header__container {
     display: flex;
     align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .header__container {
+    padding: 16px 0;
   }
+}
   
 .header__nav {
     display: flex;
