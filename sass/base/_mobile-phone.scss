@@ -4,9 +4,15 @@
     position: fixed;
     background-color: #fff;
     top: 0;
-    right: 0;
+    left: 0;
     padding: 15px 10px 48px 40px;
     z-index: 999;
+
+    transform: translateX(100%);
+}
+
+.mobile-menu.is-open {
+    transform: translateX(0);
 }
 
 .flex {
@@ -19,10 +25,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 24px;
+    height: 16px;
     background-color: transparent;
-    color: #212121;
+    color: $primary-color;
     border: none;
     margin-left: auto;
     cursor: pointer;
@@ -43,8 +49,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 18px;
+    height: 18px;
     background-color: transparent;
-    color: #212121;
+    color: $primary-color;
     border: none;
     margin-left: auto;
     cursor: pointer;
@@ -127,7 +135,5 @@
     background-color: rgba(33, 33, 33, 0.2);
 }
 
-.mobile-menu.is-open {
-    display: none;
-}
+
 

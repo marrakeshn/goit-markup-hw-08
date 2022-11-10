@@ -6,7 +6,13 @@ header {
 .header__container {
     display: flex;
     align-items: center;
+}
+
+@media screen and (min-width: 100px) and (max-width: 480px) {
+  .header__container {
+    padding: 16px 0;
   }
+}
   
 .header__nav {
     display: flex;
@@ -15,17 +21,18 @@ header {
     width: 50%;
 }
 
-@media screen and (min-width: 100px) and (max-width: 480px) {
-  .header__nav {
-    display: none;
-  }
-}
 
 .nav__list {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 80px;
+}
+
+@media screen and (min-width: 100px) and (max-width: 480px) {
+  .nav__list {
+    display: none;
+  }
 }
   
 .header-contacts__list {

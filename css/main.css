@@ -277,7 +277,7 @@ address {
 }
 
 body {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   letter-spacing: 0.03em;
 }
@@ -499,7 +499,7 @@ footer .subs__form__btn {
   background-color: var(--accent-color);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
   color: var(--white-color);
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -558,6 +558,11 @@ header {
   align-items: center;
 }
 
+@media screen and (min-width: 100px) and (max-width: 480px) {
+  .header__container {
+    padding: 16px 0;
+  }
+}
 .header__nav {
   display: flex;
   align-items: center;
@@ -565,11 +570,6 @@ header {
   width: 50%;
 }
 
-@media screen and (min-width: 100px) and (max-width: 480px) {
-  .header__nav {
-    display: none;
-  }
-}
 .nav__list {
   display: flex;
   align-items: center;
@@ -577,6 +577,11 @@ header {
   height: 80px;
 }
 
+@media screen and (min-width: 100px) and (max-width: 480px) {
+  .nav__list {
+    display: none;
+  }
+}
 .header-contacts__list {
   display: flex;
   align-items: center;
@@ -671,8 +676,23 @@ header {
   text-align: center;
 }
 
+@media screen and (min-width: 100px) and (max-width: 480px) {
+  .hero__title {
+    padding: 0;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 250px;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 1.62;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}
 .hero__btn {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   background-color: var(--accent-color);
   border: none;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
@@ -694,12 +714,17 @@ header {
   border-radius: 4px;
 }
 
+@media screen and (min-width: 100px) and (max-width: 480px) {
+  .hero__btn {
+    margin-top: 0;
+  }
+}
 header .logo {
   color: var(--accent-color);
   font-weight: 700;
   font-size: 26px;
   line-height: 31px;
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
 }
 header .logo span {
   color: #000000;
@@ -710,7 +735,7 @@ footer .logo {
   font-weight: 700;
   font-size: 26px;
   line-height: 31px;
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   margin-bottom: 20px;
   display: block;
 }
@@ -851,7 +876,7 @@ textarea:focus, textarea:hover {
 }
 
 .modal__form-btn {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   background-color: var(--accent-color);
   border: none;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
@@ -954,9 +979,14 @@ textarea:focus, textarea:hover {
   position: fixed;
   background-color: #fff;
   top: 0;
-  right: 0;
+  left: 0;
   padding: 15px 10px 48px 40px;
   z-index: 999;
+  transform: translateX(100%);
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0);
 }
 
 .flex {
@@ -969,8 +999,8 @@ textarea:focus, textarea:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 16px;
   background-color: transparent;
   color: #212121;
   border: none;
@@ -992,6 +1022,8 @@ textarea:focus, textarea:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 18px;
+  height: 18px;
   background-color: transparent;
   color: #212121;
   border: none;
@@ -1076,18 +1108,23 @@ textarea:focus, textarea:hover {
   background-color: rgba(33, 33, 33, 0.2);
 }
 
-.mobile-menu.is-open {
-  display: none;
-}
-
 .projects__filter-list {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
 
+@media screen and (min-width: 100px) and (max-width: 480px) {
+  .projects__filter-list {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+    grid-gap: 8px;
+    grid-row-gap: 15px;
+  }
+}
 .projects__filter-btn {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   border: none;
   background-color: var(--dirty-white-color);
   color: var(--primary-color);
@@ -1107,6 +1144,11 @@ textarea:focus, textarea:hover {
   margin-right: 0;
 }
 
+@media screen and (min-width: 100px) and (max-width: 480px) {
+  .projects__filter-item {
+    margin-right: 0;
+  }
+}
 .projects__filter-btn:focus, .projects__filter-btn:hover {
   cursor: pointer;
   background-color: var(--accent-color);
@@ -1120,6 +1162,12 @@ textarea:focus, textarea:hover {
   gap: 30px;
 }
 
+@media screen and (min-width: 100px) and (max-width: 480px) {
+  .projects__list {
+    justify-content: center;
+    align-items: center;
+  }
+}
 .projects__list-item {
   width: 370px;
   background: #fff;

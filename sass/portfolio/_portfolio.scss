@@ -3,6 +3,16 @@
     justify-content: center;
     margin-bottom: 50px;
 }
+
+@media screen and (min-width:100px) and (max-width:480px) {
+    .projects__filter-list {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-bottom: 40px;
+        grid-gap: 8px;
+        grid-row-gap: 15px;
+    }
+}
   
 .projects__filter-btn {
     font-family: $mainFont;
@@ -25,6 +35,12 @@
       margin-right: 0;
     }
 }
+
+@media screen and (min-width:100px) and (max-width:480px) {
+    .projects__filter-item {
+        margin-right: 0;
+    }
+}
   
 .projects__filter-btn {
     &:focus, &:hover {
@@ -39,6 +55,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+}
+
+@media screen and (min-width:100px) and (max-width:480px) {
+    .projects__list {
+        justify-content: center;
+        align-items: center;
+    } 
 }
   
 .projects__list-item {
