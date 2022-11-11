@@ -402,6 +402,7 @@ body {
   }
 }
 .features-list__item {
+  width: 270px;
   margin-right: 30px;
 }
 .features-list__item:last-of-type {
@@ -411,10 +412,11 @@ body {
 @media screen and (min-width: 100px) and (max-width: 480px) {
   .features-list__item {
     margin-right: 0;
+    width: 100%;
   }
 }
 .features-list__icon-fon {
-  width: 270px;
+  width: 100%;
   height: 120px;
   display: flex;
   align-items: center;
@@ -429,16 +431,18 @@ body {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
-  width: 270px;
-  display: flex;
   margin-bottom: 10px;
   margin-top: 30px;
 }
 
+@media screen and (min-width: 100px) and (max-width: 480px) {
+  .features-list__title {
+    text-align: center;
+  }
+}
 .features-list__descr {
   line-height: 1.71;
   color: var(--secondary-color);
-  width: 270px;
 }
 
 footer {
