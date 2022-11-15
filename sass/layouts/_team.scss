@@ -1,52 +1,62 @@
 .team {
-    background: var(--dirty-white-color);
+    background: $dirty-white-color;
     text-align: center;
 }
-    
+
 .team__container-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-top: 50px;
-}
+    flex-wrap: wrap;
+    grid-gap: 30px;
 
-@media screen and (min-width:100px) and (max-width:480px) {
-    .team__container-list {
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        grid-gap: 30px;
+    @media screen and (min-width:1200px) {
+        display: flex;
+        flex-wrap: nowrap;
     }
 }
 
 .team__card {
-    background: var(--white-color);
+    background: $white-color;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14), 0 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0 0 4px 4px;
     border: transparent solid 1px;
     padding-bottom: 30px;
+
+    &-img {
+        width: 100%;
+
+        @media screen and (min-width:768px) {
+            width: 354px;
+        }
+
+        @media screen and (min-width:1200px) {
+            width: 270px;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        width: 354px;
+    }
+
+    @media screen and (min-width:1200px) {
+        width: 270px;
+    }
 }
-  
-.team__title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-}
-  
+
 .team__card-name {
     margin-top: 30px;
     margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
-    color: var(--primary-color);
+    color: $primary-color;
     text-align: center;
 }
-  
+
 .team__card-position {
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
-    color: var(--secondary-color);
+    color: $secondary-color;
 }
-  

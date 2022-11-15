@@ -2,7 +2,7 @@
     width: 100vw;
     height: 100vh;
     position: fixed;
-    background-color: #fff;
+    background-color: $white-color;
     top: 0;
     left: 0;
     padding: 15px 10px 48px 40px;
@@ -32,17 +32,15 @@
     border: none;
     margin-left: auto;
     cursor: pointer;
+
+    @media screen and (min-width:768px) {
+        display: none;
+    }
 }
 
 .menu-open:hover,
 .menu-open:focus {
-    fill: var(--accent-color);
-}
-
-@media screen and (min-width: 768px) {
-    .menu-open {
-        display: none;
-    }
+    fill: $accent-color;
 }
 
 .menu-close {
@@ -60,7 +58,7 @@
 
 .menu-close:hover,
 .menu-close:focus {
-    fill: var(--accent-color);
+    fill: $accent-color;
 }
 
 .mobile-menu-list__item:not(:last-child) {
@@ -68,44 +66,44 @@
 }
 
 .mobile-menu-list__link {
-    font-family: Roboto;
+    font-family: $mainFont;
     font-weight: 500;
     font-size: 40px;
     line-height: 1.18;
     letter-spacing: 0.02em;
-    color: #212121;
+    color: $primary-color;
 }
 
 .mobile-menu-list__link:focus,
 .mobile-menu-list__link:hover {
-    color: var(--accent-color);
+    color: $accent-color;
 }
 
 .mobile-menu-list__link--current {
-    color: var(--accent-color);
+    color: $accent-color;
 }
 
 .mobile-menu-list__tell {
     display: block;
     margin-bottom: 32px;
-    font-family: Roboto;
+    font-family: $mainFont;
     font-style: normal;
     font-weight: 500;
     font-size: 34px;
     line-height: 1.18;
     letter-spacing: 0.02em;
-    color: #2196f3;
+    color: $accent-color;
 }
 
 .mobile-menu-list__mail {
     display: block;
-    font-family: Roboto;
+    font-family: $mainFont;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 1.17;
     letter-spacing: 0.02em;
-    color: #757575;
+    color: $secondary-color;
     margin-bottom: 64px;
 }
 
@@ -121,7 +119,7 @@
     font-size: 18px;
     line-height: 1.22;
     letter-spacing: 0.02em;
-    color: #2196f3;
+    color: $accent-color;
 }
 
 .mobile-menu-list__social-item:not(:first-child)::before {
@@ -134,6 +132,3 @@
     height: 22px;
     background-color: rgba(33, 33, 33, 0.2);
 }
-
-
-

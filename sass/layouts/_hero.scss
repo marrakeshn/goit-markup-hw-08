@@ -1,48 +1,52 @@
 .hero {
-    padding: 200px 0;
     text-align: center;
+    margin: auto;
 }
 
-
-  
 .overlay {
+    padding: 118px 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/orderoverlay.jpg) no-repeat (center / cover);
+
+    @media screen and (min-width:768px) {
+        background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/orderoverlay@2x.jpg) no-repeat (center / cover);
+        padding: 118px 204px;
+    }
+
+    @media screen and (min-width:1200px) {
+        background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/orderoverlay@3x.jpg) no-repeat (center / cover);
+        padding: 200px 452px;
+    }
 }
 
-
-  
 .hero__title {
-    color: var(--white-color);
-    text-transform: uppercase;
+    margin-bottom: 30px;
+    max-width: 360px;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 18px;
+    line-height: 1.62;
     letter-spacing: .06em;
-    text-align: center;
-}
+    text-transform: uppercase;
+    color: $white-color;
 
-@media screen and (min-width: 100px) and (max-width: 480px) {
-    .hero__title {
-        padding: 0;
-        margin-bottom: 30px;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 250px;
-        font-weight: 900;
-        font-size: 18px;
+    @media screen and (min-width:768px) {
+        font-size: 26px;
         line-height: 1.62;
-        letter-spacing: .06em;
-        text-transform: uppercase;
-        color: $white-color;
+    }
+
+    @media screen and (min-width:1200px) {
+        max-width: 690px;
+        font-size: 44px;
+        line-height: 1.36;
     }
 }
 
 .hero__btn {
+    padding: 10px 24px;
     font-family: $mainFont;
-    background-color: var(--accent-color);
+    background-color: $accent-color;
     border: none;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -50,23 +54,19 @@
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: .06em;
-    color: var(--white-color);
-    margin-top: 30px;
-    padding: 10px 32px 10px 32px;
+    color: $white-color;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-    &:focus, &:hover {
-      color: var(--white-color);
-      background-color: var(--btn-active);
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-      border-radius: 4px;
-    }
-}
 
-@media screen and (min-width: 100px) and (max-width: 480px) {
-    .hero__btn {
-        margin-top: 0;
+    @media screen and (min-width:1200px) {
+        padding: 10px 32px;
+    }
+
+    &:focus,
+    &:hover {
+        color: $white-color;
+        background-color: $btn-active;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
     }
 }
-  
