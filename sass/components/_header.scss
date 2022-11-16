@@ -3,15 +3,17 @@ header {
   border-bottom: 1px solid #ececec;
 }
 
-
-
 .header__container {
   display: flex;
   align-items: center;
   padding: 16px 0;
 
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) {
     padding: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
   }
 }
 
@@ -21,7 +23,7 @@ header {
   justify-content: space-between;
   width: 100%;
 
-  @media screen and (min-width:1200px) {
+  @media screen and (min-width: 1200px) {
     width: 50%;
   }
 }
@@ -29,15 +31,14 @@ header {
 .nav__list {
   display: none;
 
-  @media screen and (min-width:768px) {
-    padding-left: 87px;
+  @media screen and (min-width: 768px) {
+    margin-left: 87px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     height: 80px;
   }
 
-  @media screen and (min-width:1200px) {
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
     padding-left: 0;
   }
 }
@@ -45,7 +46,8 @@ header {
 .header-contacts__list {
   display: none;
 
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: 96px;
     display: block;
     justify-content: flex-end;
     font-weight: 500;
@@ -54,27 +56,32 @@ header {
     width: 50%;
   }
 
-  @media screen and (min-width:1200px) {
+  @media screen and (min-width: 1200px) {
     display: flex;
     align-items: center;
     justify-content: flex-end;
   }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .nav__item {
-    margin-right: 51px;
+    margin-right: 50px;
     position: relative;
     height: 100%;
     display: flex;
     align-items: center;
     cursor: pointer;
 
+    &:last-of-type {
+      margin-right: 0;
+    }
 
     a {
       color: $primary-color;
       font-weight: 500;
+      font-size: 14px;
       line-height: 1.14;
+      letter-spacing: 0.02em;
       transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -100,10 +107,6 @@ header {
         background: $accent-color;
         transform: scaleX(0);
         transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-        // @media screen and (min-width:1200px) {
-        //     bottom: -1px;
-        // }
       }
     }
 
@@ -115,12 +118,35 @@ header {
     }
   }
 
-  .header-contacts__item {
+  .header-contacts__link {
+    padding: 0;
 
+    &:last-of-type {
+      padding: 10px 0 0 0;
+
+      @media screen and (min-width: 1200px) {
+        padding: 0;
+      }
+    }
+
+    &:hover .header-contacts__icon,
+    &:focus .header-contacts__icon {
+      fill: $accent-color;
+    }
+  }
+
+  .header-contacts__item {
+    display: flex;
+    align-items: center;
     color: $secondary-color;
-    // margin-right: 30px;
 
     a {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.16;
+      letter-spacing: 0.02em;
       color: $secondary-color;
       transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
@@ -130,21 +156,47 @@ header {
       color: $accent-color;
     }
 
-    &:last-of-type {
-      margin-right: 0;
-    }
-
-    // @media screen and (min-width:768px) {
-    //     margin-bottom: 10px;
-    // }
-
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width: 1200px) {
       margin-right: 30px;
     }
   }
 
   .header-contacts__icon {
+    margin-right: 8px;
+    fill: $secondary-color;
+
+    &.envelope {
+      width: 14px;
+      height: 10px;
+    }
+
+    &.smartphone {
+      width: 10px;
+      height: 14px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-contacts__icon {
     margin-right: 10px;
     fill: $secondary-color;
+
+    &.envelope {
+      width: 16px;
+      height: 12px;
+    }
+
+    &.smartphone {
+      width: 10px;
+      height: 16px;
+    }
+  }
+
+  .header-contacts__item {
+    a {
+      font-size: 14px;
+      line-height: 1.14;
+    }
   }
 }

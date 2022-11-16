@@ -4,6 +4,10 @@
   grid-gap: 30px;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width:1200px) {
+    align-items: baseline;
+  }
 }
 
 .features-list__item {
@@ -15,6 +19,7 @@
 
   @media screen and (min-width:1200px) {
     width: 270px;
+    
   }
 }
 

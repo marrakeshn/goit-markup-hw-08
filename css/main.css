@@ -249,6 +249,10 @@ summary {
   display: list-item;
 }
 
+li {
+  text-decoration: none;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -406,6 +410,11 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 1200px) {
+  .features-list {
+    align-items: baseline;
+  }
+}
 
 .features-list__item {
   width: 100%;
@@ -476,9 +485,8 @@ footer .address {
 }
 @media screen and (min-width: 1200px) {
   footer .address {
-    margin-left: 55px;
-    margin-bottom: 0;
     text-align: left;
+    margin-right: 70px;
   }
 }
 footer .social-link {
@@ -493,6 +501,7 @@ footer h3 {
   color: #fff;
   font-weight: 700;
   line-height: 1.14;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
@@ -502,6 +511,7 @@ footer h3 {
   }
 }
 footer .footer__columns {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -521,8 +531,8 @@ footer .footer__columns {
 @media screen and (min-width: 1200px) {
   footer .footer__columns {
     flex-wrap: nowrap;
-    display: flex;
     align-items: baseline;
+    gap: 0;
   }
 }
 footer .social {
@@ -533,19 +543,13 @@ footer .social {
     margin-bottom: 0;
   }
 }
-@media screen and (min-width: 1200) {
+@media screen and (min-width: 1200px) {
   footer .social {
-    margin-left: 70px;
-    margin-bottom: 0;
+    margin-right: 93px;
   }
 }
 footer .subs {
   margin-left: 0;
-}
-@media screen and (min-width: 1200px) {
-  footer .subs__form {
-    display: flex;
-  }
 }
 footer .subs__form__input {
   margin-bottom: 20px;
@@ -569,7 +573,6 @@ footer .subs__form__input::placeholder {
 }
 @media screen and (min-width: 1200px) {
   footer .subs__form__input {
-    margin-bottom: 0;
     width: 358px;
   }
 }
@@ -578,8 +581,7 @@ footer .subs__form__btn {
   align-items: center;
   justify-content: center;
   border: none;
-  margin: 0;
-  padding: 8px 29px;
+  padding: 10px 31px 10px 29px;
   border-radius: 4px;
   background-color: #2196F3;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
@@ -587,15 +589,15 @@ footer .subs__form__btn {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.87;
+  line-height: 1.88;
   letter-spacing: 0.06em;
   cursor: pointer;
-  min-height: 43px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 1200px) {
   footer .subs__form__btn {
     margin-left: 12px;
+    padding: 10px 28px;
   }
 }
 footer .subs__form__btn::after {
@@ -609,6 +611,7 @@ footer .subs__form__btn::after {
 
 .address__list-item {
   line-height: 1.71;
+  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 9px;
 }
@@ -634,6 +637,11 @@ header {
     padding: 0;
   }
 }
+@media screen and (min-width: 1200px) {
+  .header__container {
+    justify-content: space-between;
+  }
+}
 
 .header__nav {
   display: flex;
@@ -652,15 +660,14 @@ header {
 }
 @media screen and (min-width: 768px) {
   .nav__list {
-    padding-left: 87px;
+    margin-left: 87px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     height: 80px;
   }
 }
 @media screen and (min-width: 1200px) {
   .nav__list {
+    margin-left: auto;
     padding-left: 0;
   }
 }
@@ -668,8 +675,9 @@ header {
 .header-contacts__list {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .header-contacts__list {
+    margin-left: 96px;
     display: block;
     justify-content: flex-end;
     font-weight: 500;
@@ -688,17 +696,22 @@ header {
 
 @media screen and (min-width: 768px) {
   .nav__item {
-    margin-right: 51px;
+    margin-right: 50px;
     position: relative;
     height: 100%;
     display: flex;
     align-items: center;
     cursor: pointer;
   }
+  .nav__item:last-of-type {
+    margin-right: 0;
+  }
   .nav__item a {
     color: #212121;
     font-weight: 500;
+    font-size: 14px;
     line-height: 1.14;
+    letter-spacing: 0.02em;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .nav__item:active a, .nav__item:focus-within a, .nav__item:hover a {
@@ -724,18 +737,41 @@ header {
     transform: scaleX(1);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
+  .header-contacts__link {
+    padding: 0;
+  }
+  .header-contacts__link:last-of-type {
+    padding: 10px 0 0 0;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .header-contacts__link:last-of-type {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header-contacts__link:hover .header-contacts__icon, .header-contacts__link:focus .header-contacts__icon {
+    fill: #2196F3;
+  }
+}
+@media screen and (min-width: 768px) {
   .header-contacts__item {
+    display: flex;
+    align-items: center;
     color: #757575;
   }
   .header-contacts__item a {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
     color: #757575;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .header-contacts__item:focus-within a, .header-contacts__item:hover a {
     color: #2196F3;
-  }
-  .header-contacts__item:last-of-type {
-    margin-right: 0;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1200px) {
@@ -745,54 +781,137 @@ header {
 }
 @media screen and (min-width: 768px) {
   .header-contacts__icon {
+    margin-right: 8px;
+    fill: #757575;
+  }
+  .header-contacts__icon.envelope {
+    width: 14px;
+    height: 10px;
+  }
+  .header-contacts__icon.smartphone {
+    width: 10px;
+    height: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-contacts__icon {
     margin-right: 10px;
     fill: #757575;
+  }
+  .header-contacts__icon.envelope {
+    width: 16px;
+    height: 12px;
+  }
+  .header-contacts__icon.smartphone {
+    width: 10px;
+    height: 16px;
+  }
+  .header-contacts__item a {
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 .hero {
   text-align: center;
-  margin: auto;
 }
 
 .overlay {
-  padding: 118px 60px;
+  max-width: 1600px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/orderoverlay.jpg) no-repeat center/cover;
+  justify-content: center;
+  padding: 118px 60px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/hero/hero-480.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/hero/hero-960.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media screen and (min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/hero/hero-1440.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
 @media screen and (min-width: 768px) {
   .overlay {
-    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/orderoverlay@2x.jpg) no-repeat center/cover;
     padding: 118px 204px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/hero/hero-768.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/hero/hero-1536.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 3), screen and (min-width: 768px) and (min-resolution: 288dpi), screen and (min-width: 768px) and (min-resolution: 3dppx) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/hero/hero-2304.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 }
 @media screen and (min-width: 1200px) {
   .overlay {
-    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/orderoverlay@3x.jpg) no-repeat center/cover;
     padding: 200px 452px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero/hero-1600.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero/hero-3200.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (min-resolution: 288dpi), screen and (min-width: 1200px) and (min-resolution: 3dppx) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero/hero-4800.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .overlay {
+    width: 1600px;
   }
 }
 
 .hero__title {
   margin-bottom: 30px;
+  min-width: 360px;
   max-width: 360px;
   font-weight: 900;
-  font-size: 18px;
+  font-size: 26px;
   line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #fff;
 }
-@media screen and (min-width: 768px) {
-  .hero__title {
-    font-size: 26px;
-    line-height: 1.62;
-  }
-}
 @media screen and (min-width: 1200px) {
   .hero__title {
-    max-width: 690px;
+    min-width: 696px;
     font-size: 44px;
     line-height: 1.36;
   }
@@ -828,9 +947,17 @@ header {
 header .logo {
   color: #2196F3;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
   font-family: "Raleway", sans-serif;
+}
+@media screen and (min-width: 1200px) {
+  header .logo {
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+  }
 }
 header .logo span {
   color: #000000;
@@ -839,11 +966,19 @@ header .logo span {
 footer .logo {
   color: #2196F3;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
   font-family: "Raleway", sans-serif;
   margin-bottom: 20px;
   display: block;
+}
+@media screen and (min-width: 1200px) {
+  footer .logo {
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+  }
 }
 footer .logo span {
   color: #fff;
@@ -1258,7 +1393,6 @@ textarea:focus, textarea:hover {
 .projects__list {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   gap: 30px;
 }
@@ -1357,15 +1491,15 @@ textarea:focus, textarea:hover {
 .projects-item__filter {
   font-size: 16px;
   line-height: 1.88;
-  letter-spacing: 0, 3em;
+  letter-spacing: 0.03em;
   color: #757575;
 }
 
-.section {
+section {
   padding: 60px 0;
 }
 @media screen and (min-width: 1200px) {
-  .section {
+  section {
     padding: 94px 0;
   }
 }
@@ -1420,6 +1554,7 @@ textarea:focus, textarea:hover {
 }
 
 .team__card {
+  width: 100%;
   background: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14), 0 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 4px 4px;

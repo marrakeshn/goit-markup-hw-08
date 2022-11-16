@@ -9,6 +9,12 @@
   refs.closeModalBtn.addEventListener("click", toggleModal);
 
   function toggleModal() {
+    const isModalOpened = refs.modal.classList.contains("is-hidden")
+    const scrollLockMethod = isModalOpened
+      ? 'disableBodyScroll'
+      : 'enableBodyScroll';
+    bodyScrollLock[scrollLockMethod](document.body);
+    
     refs.modal.classList.toggle("is-hidden");
   }
 })();

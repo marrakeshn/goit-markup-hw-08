@@ -1,7 +1,6 @@
 .projects__filter-list {
     display: flex;
     flex-wrap: wrap;
-    // justify-content: flex-start;
     margin-bottom: 40px;
     grid-gap: 15px;
     grid-row-gap: 15px;
@@ -38,18 +37,9 @@
     }
 }
 
-// .projects__filter-item {
-//     margin-right: px;
-
-//     &:last-of-type {
-//         margin-right: 0;
-//     }
-// }
-
 .projects__list {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     gap: 30px;
 
@@ -144,6 +134,6 @@
 .projects-item__filter {
     font-size: 16px;
     line-height: 1.88;
-    letter-spacing: 0, 3em;
+    letter-spacing: .03em;
     color: $secondary-color;
 }
