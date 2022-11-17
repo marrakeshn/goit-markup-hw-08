@@ -299,9 +299,7 @@ body {
   align-items: center;
 }
 .about .about__imgs {
-  margin-top: 50px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   width: 1170px;
 }
@@ -510,19 +508,17 @@ footer .footer__columns {
 }
 @media screen and (min-width: 768px) {
   footer .footer__columns {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-direction: unset;
+    align-items: baseline;
     flex-wrap: wrap;
-    gap: 30px 165px;
-    flex-direction: row;
+    gap: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
   footer .footer__columns {
     flex-wrap: nowrap;
-    align-items: baseline;
+    justify-content: unset;
     gap: 0;
   }
 }
@@ -804,10 +800,11 @@ header {
 }
 .hero {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero__title {
   margin-bottom: 30px;
-  min-width: 360px;
   max-width: 360px;
   font-weight: 900;
   font-size: 26px;
@@ -855,7 +852,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 118px 60px;
+  padding: 118px 0;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/hero/hero-480.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -879,7 +876,6 @@ header {
 }
 @media screen and (min-width: 768px) {
   .overlay {
-    padding: 118px 204px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/hero/hero-768.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -904,7 +900,7 @@ header {
 }
 @media screen and (min-width: 1200px) {
   .overlay {
-    padding: 200px 452px;
+    padding: 200px 0;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero/hero-1600.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -1343,6 +1339,13 @@ textarea:focus, textarea:hover {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
+    grid-gap: 8px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects__filter-list {
+    margin-bottom: 50px;
   }
 }
 
@@ -1579,5 +1582,7 @@ section {
 @media screen and (min-width: 1200px) {
   .work {
     display: block;
+    padding-top: 0;
+    padding-bottom: 30px;
   }
 }/*# sourceMappingURL=main.css.map */

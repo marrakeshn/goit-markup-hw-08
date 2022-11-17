@@ -47,18 +47,16 @@ footer {
         text-align: center;
 
         @media screen and (min-width:768px) {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
+            justify-content: space-around;
+            flex-direction: unset;
+            align-items: baseline;
             flex-wrap: wrap;
-            gap: 30px 165px;
-            flex-direction: row;
+            gap: 60px;
         }
 
         @media screen and (min-width:1200px) {
             flex-wrap: nowrap;
-            align-items: baseline;
+            justify-content: unset;
             gap: 0;
         }
     }
