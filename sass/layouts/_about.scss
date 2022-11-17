@@ -2,27 +2,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
 
-.about__imgs {
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 1170px;
-}
+    .about__imgs {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 1170px;
 
-.about__descr {
-    width: 100%;
-    position: relative;
-    bottom: 74px;
-    left: 0;
-    padding: 27px 0;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-align: center;
-    text-transform: uppercase;
-    color: $white-color;
-    background-color: rgba(47, 48, 58, 0.8);
+        p {
+            width: 100%;
+            position: relative;
+            bottom: 74px;
+            left: 0;
+            padding: 27px 0;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.14;
+            text-align: center;
+            text-transform: uppercase;
+            color: $white-color;
+            background-color: rgba(47, 48, 58, 0.8);
+        }
+    }
 }

@@ -1,4 +1,7 @@
 .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -7,18 +10,11 @@
     left: 0;
     padding: 15px 10px 48px 40px;
     z-index: 999;
-
     transform: translateX(100%);
-}
 
-.mobile-menu.is-open {
-    transform: translateX(0);
-}
-
-.flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    &.is-open {
+        transform: translateX(0);
+    }
 }
 
 .menu-open {
@@ -36,11 +32,11 @@
     @media screen and (min-width:768px) {
         display: none;
     }
-}
 
-.menu-open:hover,
-.menu-open:focus {
-    fill: $accent-color;
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+    }
 }
 
 .menu-close {
@@ -54,11 +50,11 @@
     border: none;
     margin-left: auto;
     cursor: pointer;
-}
 
-.menu-close:hover,
-.menu-close:focus {
-    fill: $accent-color;
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+    }
 }
 
 .mobile-menu-list__item:not(:last-child) {
@@ -72,11 +68,11 @@
     line-height: 1.18;
     letter-spacing: 0.02em;
     color: $primary-color;
-}
 
-.mobile-menu-list__link:focus,
-.mobile-menu-list__link:hover {
-    color: $accent-color;
+    &:focus,
+    &:hover {
+        color: $accent-color;
+    }
 }
 
 .mobile-menu-list__link--current {
@@ -111,24 +107,24 @@
     display: flex;
     flex-direction: row;
     column-gap: 20px;
-}
 
-.mobile-menu-list__social-item {
-    position: relative;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.22;
-    letter-spacing: 0.02em;
-    color: $accent-color;
-}
-
-.mobile-menu-list__social-item:not(:first-child)::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -10px;
-    width: 1px;
-    height: 22px;
-    background-color: rgba(33, 33, 33, 0.2);
+    &-item {
+        position: relative;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.22;
+        letter-spacing: 0.02em;
+        color: $accent-color;
+    
+        &:not(:first-child)::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -10px;
+            width: 1px;
+            height: 22px;
+            background-color: rgba(33, 33, 33, 0.2);
+        }
+    }
 }

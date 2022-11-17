@@ -15,14 +15,15 @@ footer {
         }
     }
 
-    .social-link {
-        background-color: rgba(255, 255, 255, 0.1);
+    .social-list {
+        .social-link {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .social-icon {
+            fill: $white-color;
+        }
     }
-
-    .social-icon {
-        fill: $white-color;
-    }
-
+   
     h3 {
         width: 100%;
         font-size: 14px;

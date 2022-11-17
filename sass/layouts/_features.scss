@@ -8,18 +8,17 @@
   @media screen and (min-width:1200px) {
     align-items: baseline;
   }
-}
 
-.features-list__item {
-  width: 100%;
-
-  @media screen and (min-width:768px) {
-    width: 354px;
-  }
-
-  @media screen and (min-width:1200px) {
-    width: 270px;
+  &__item {
+    width: 100%;
     
+    @media screen and (min-width:768px) {
+      width: 354px;
+    }
+  
+    @media screen and (min-width:1200px) {
+      width: 270px;
+    }
   }
 }
 
